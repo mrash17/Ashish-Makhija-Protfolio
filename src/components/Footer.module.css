@@ -1,0 +1,68 @@
+.footer {
+  padding: 6rem 0 3rem;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.email {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4rem;
+  transition: color 0.3s ease;
+}
+
+.email:hover {
+  color: var(--accent-primary);
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.socialIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-5px);
+}
+
+.bottomBar {
+  padding-top: 3rem;
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .email {
+    font-size: 1.25rem;
+  }
+  
+  .bottomBar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

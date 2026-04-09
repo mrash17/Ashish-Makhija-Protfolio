@@ -1,0 +1,49 @@
+.testimonials {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.card {
+  background: var(--surface-color);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  text-align: left;
+  position: relative;
+}
+
+.quote {
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 50%;
+}
+
+.info h4 {
+  font-size: 1rem;
+}
+
+.info p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
