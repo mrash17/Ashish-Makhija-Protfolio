@@ -1,21 +1,19 @@
 .projects {
-  text-align: center;
+  padding: 2rem 0;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
-  margin-top: 4rem;
 }
 
 .card {
   background: var(--surface-color);
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  text-align: left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
@@ -26,16 +24,15 @@
 
 .imageWrapper {
   width: 100%;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
-  position: relative;
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
 }
 
 .card:hover .image {
@@ -43,19 +40,30 @@
 }
 
 .cardContent {
-  padding: 2rem;
+  padding: 1.5rem;
+}
+
+.projectIcon {
+  color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projectTitle {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .projectDesc {
   color: var(--text-secondary);
-  font-size: 0.9375rem;
+  font-size: 0.95rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  min-height: 3.2rem; /* Ensure consistent card heights */
 }
 
 .tags {
@@ -67,11 +75,31 @@
 
 .tag {
   background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
   padding: 0.25rem 0.75rem;
   border-radius: 50px;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.link {
   color: var(--text-secondary);
-  border: 1px solid var(--glass-border);
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--accent-primary);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {

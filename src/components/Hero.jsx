@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { ArrowRight, Send } from 'lucide-react';
 import styles from './Hero.module.css';
 
 const roles = [
@@ -83,8 +84,12 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <a href="#projects" className={styles.primaryBtn}>View Projects</a>
-          <a href="#contact" className={styles.secondaryBtn}>Get In Touch</a>
+          <a href="#projects" className={styles.primaryBtn}>
+            View Projects <ArrowRight size={20} className={styles.btnIcon} />
+          </a>
+          <a href="#contact" className={styles.secondaryBtn}>
+            Get In Touch <Send size={18} className={styles.btnIcon} />
+          </a>
         </motion.div>
       </div>
     </section>

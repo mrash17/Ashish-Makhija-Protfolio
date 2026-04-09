@@ -1,27 +1,80 @@
 .footer {
   padding: 6rem 0 3rem;
-  border-top: 1px solid var(--glass-border);
   text-align: center;
+  position: relative;
 }
 
-.content h2 {
-  font-size: 3rem;
+.contactCard {
+  background: var(--surface-color);
+  border: 1px solid var(--glass-border);
+  padding: 5rem 2rem;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.contactCard::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contactCard h1, .contactCard h2, .contactCard a {
+  position: relative;
+  z-index: 1;
+}
+
+.contactCard h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 3.5rem;
+  line-height: 1.1;
   margin-bottom: 3rem;
+  color: var(--text-primary);
 }
 
-.email {
-  font-size: 2rem;
+.emailCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
-  display: block;
-  margin-bottom: 4rem;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.5rem;
 }
 
-.email:hover {
+.emailCta:hover {
   color: var(--accent-primary);
+  border-bottom-color: var(--accent-primary);
 }
 
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.emailCta:hover .arrowIcon {
+  transform: translate(5px, -5px);
+}
+
+/* Socials */
 .socialLinks {
   display: flex;
   justify-content: center;
@@ -30,20 +83,24 @@
 }
 
 .socialIcon {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: 1px solid var(--glass-border);
+  background: var(--surface-color);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  color: var(--text-primary);
 }
 
 .socialIcon:hover {
   border-color: var(--accent-primary);
-  color: var(--accent-primary);
+  color: white;
+  background: var(--accent-primary);
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
 }
 
 .bottomBar {
@@ -57,10 +114,15 @@
 }
 
 @media (max-width: 768px) {
-  .email {
-    font-size: 1.25rem;
+  .contactCard {
+    padding: 3rem 1.5rem;
   }
-  
+  .subtitle {
+    font-size: 2.5rem;
+  }
+  .emailCta {
+    font-size: 1.5rem;
+  }
   .bottomBar {
     flex-direction: column;
     gap: 1rem;

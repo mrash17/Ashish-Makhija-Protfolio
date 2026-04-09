@@ -1,48 +1,87 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Database, Layout, Server, Smartphone, Cpu } from 'lucide-react';
+import { 
+  Code2, 
+  Database, 
+  Layers, 
+  Server, 
+  Settings, 
+  Cpu, 
+  Globe, 
+  Cloud, 
+  Zap, 
+  Boxes 
+} from 'lucide-react';
 import styles from './Skills.module.css';
 
-const skills = [
-  { name: 'Frontend', icon: <Layout />, items: ['React', 'Next.js', 'TypeScript', 'CSS3'] },
-  { name: 'Backend', icon: <Server />, items: ['Node.js', 'Express', 'C#', '.NET Core'] },
-  { name: 'Database', icon: <Database />, items: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis'] },
-  { name: 'Automation', icon: <Cpu />, items: ['Industrial IoT', 'PLC Integration', 'Web API'] },
-  { name: 'Mobile', icon: <Smartphone />, items: ['React Native', 'Responsive Web'] },
-  { name: 'Tools', icon: <Code2 />, items: ['Git', 'Docker', 'AWS', 'Vercel'] },
+const skillGroups = [
+  { 
+    name: 'Architecture', 
+    icon: <Boxes />, 
+    techs: ['Microservices', 'Clean Architecture', 'System Design', 'Domain Driven Design'] 
+  },
+  { 
+    name: 'Frontend', 
+    icon: <Globe />, 
+    techs: ['React', 'Next.js', 'Typescript', 'Tailwind', 'Redux / Signal'] 
+  },
+  { 
+    name: 'Backend', 
+    icon: <Server />, 
+    techs: ['Node.js', 'Express', 'C# / .NET Core', 'Python', 'Go'] 
+  },
+  { 
+    name: 'Database', 
+    icon: <Database />, 
+    techs: ['PostgreSQL', 'MongoDB', 'Redis', 'SQL Server', 'Prisma / EF Core'] 
+  },
+  { 
+    name: 'Automation', 
+    icon: <Cpu />, 
+    techs: ['Industrial IoT', 'PLC Integration', 'SCADA / HMI', 'Real-time Systems'] 
+  },
+  { 
+    name: 'Cloud & DevOps', 
+    icon: <Cloud />, 
+    techs: ['Docker', 'Kubernetes', 'AWS / Azure', 'CI/CD Pipelines', 'Nginx'] 
+  }
 ];
 
 const Skills = () => {
   return (
     <section id="experience" className="container">
       <div className={styles.skills}>
-        <motion.h2 
-          className="gradient-text"
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          style={{ textAlign: 'center', marginBottom: '5rem' }}
         >
-          Technical Tech-Stack
-        </motion.h2>
+          <h2 className="gradient-text" style={{ fontSize: '3rem', fontWeight: 800 }}>Technical Tech-Stack</h2>
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '1rem auto 0' }}>
+            A comprehensive suite of technologies mastered over 7+ years to build 
+            resilient, high-performance digital ecosystems.
+          </p>
+        </motion.div>
         
         <div className={styles.grid}>
-          {skills.map((skill, index) => (
+          {skillGroups.map((group, index) => (
             <motion.div 
               key={index}
               className={styles.skillCard}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               <div className={styles.iconContainer}>
-                {skill.icon}
+                {group.icon}
               </div>
-              <h3 className={styles.skillName}>{skill.name}</h3>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center' }}>
-                {skill.items.map((item, i) => (
-                  <span key={i} style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-                    {item}{i < skill.items.length - 1 ? ' •' : ''}
+              <h3 className={styles.skillName}>{group.name}</h3>
+              <div className={styles.tagContainer}>
+                {group.techs.map((tech, i) => (
+                  <span key={i} className={styles.tag}>
+                    {tech}
                   </span>
                 ))}
               </div>

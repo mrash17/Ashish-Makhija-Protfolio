@@ -5,7 +5,8 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding-top: 80px; /* Offset for navbar */
+  padding-top: 80px;
+  /* Offset for navbar */
 }
 
 .content {
@@ -18,7 +19,8 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  min-height: 3.5rem; /* Prevent layout shift */
+  min-height: 3.5rem;
+  /* Prevent layout shift */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,8 +37,15 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .title {
@@ -128,10 +137,12 @@
   .title {
     font-size: 3.5rem;
   }
+
   .roleContainer {
     font-size: 1.75rem;
     min-height: 2.5rem;
   }
+
   .cursor {
     height: 1.75rem;
   }

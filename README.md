@@ -16,11 +16,7 @@ A premium, full-stack developer portfolio built with React, Vite, and Framer Mot
 - [npm](https://www.npmjs.com/) 
 
 ### Installation
-1. Navigate to the project directory:
-   ```bash
-   cd d:\projects\Protfolio
-   ```
-2. Install dependencies (if not already done):
+1. Install dependencies (if not already done):
    ```bash
    npm install
    ```

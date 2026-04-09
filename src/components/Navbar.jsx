@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Mail, Linkedin } from 'lucide-react';
+import { Menu, X, Github, Mail, Linkedin, Phone } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -25,14 +25,14 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : styles.transparent}`}>
       <div className={`container ${styles.navContent}`}>
-        <a href="#home" className={`${styles.logo} gradient-text`}>Ashish.dev</a>
+        <a href="#home" className={`${styles.logo} gradient-text`}>Makhija Ashish</a>
 
         {/* Desktop Nav */}
         <div className={styles.links}>
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
+            <a
+              key={link.name}
+              href={link.href}
               className={styles.link}
             >
               {link.name}
@@ -48,6 +48,9 @@ const Navbar = () => {
             <a href="mailto:ashishmakhija2000@gmail.com" className={styles.socialIcon}>
               <Mail size={20} />
             </a>
+            <a href="tel:9054146935" className={styles.socialIcon}>
+              <Phone size={20} />
+            </a>
           </div>
         </div>
 
@@ -61,9 +64,9 @@ const Navbar = () => {
       {isOpen && (
         <div className={styles.mobileMenu}>
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
+            <a
+              key={link.name}
+              href={link.href}
               className={styles.link}
               onClick={() => setIsOpen(false)}
             >
