@@ -79,7 +79,10 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .socialIcon {

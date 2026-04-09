@@ -9,13 +9,10 @@ const Footer = () => {
         <div className={styles.contactCard}>
           <h1 className="gradient-text">Get In Touch</h1>
           <h2 className={styles.subtitle}>Let's build something <br /> amazing together</h2>
-          
-          <a href="mailto:ashishmakhija2000@gmail.com" className={styles.emailCta}>
-            ashishmakhija2000@gmail.com <ArrowUpRight className={styles.arrowIcon} size={32} />
-          </a>
-        </div>
 
-        <div className={styles.content}>
+          {/* <a href="mailto:ashishmakhija2000@gmail.com" className={styles.emailCta}>
+            ashishmakhija2000@gmail.com <ArrowUpRight className={styles.arrowIcon} size={32} />
+          </a> */}
           <div className={styles.socialLinks}>
             <a href="https://github.com/mrash17" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
               <Github size={24} />
@@ -25,6 +22,9 @@ const Footer = () => {
             </a>
             <a href="tel:9054146935" className={styles.socialIcon}>
               <Phone size={24} />
+            </a>
+            <a href="mailto:ashishmakhija2000@gmail.com" className={styles.socialIcon}>
+              <Mail size={24} />
             </a>
           </div>
         </div>

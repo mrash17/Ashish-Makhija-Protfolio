@@ -53,11 +53,7 @@ const Hero = () => {
       </div>
       
       <div className={`container ${styles.content}`}>
-        <div className={styles.roleContainer}>
-          <span className="gradient-text">{currentText}</span>
-          <span className={styles.cursor}></span>
-        </div>
-        
+
         <motion.h1 
           className={styles.title}
           initial={{ opacity: 0, scale: 0.9 }}
@@ -77,6 +73,11 @@ const Hero = () => {
           I'm Ashish Makhija, a passionate full-stack developer dedicated to building high-performance 
           web applications and industrial automation solutions.
         </motion.p>
+        
+        <div className={styles.roleContainer}>
+          <span className="gradient-text">{currentText}</span>
+          <span className={styles.cursor}></span>
+        </div>
         
         <motion.div 
           className={styles.cta}
